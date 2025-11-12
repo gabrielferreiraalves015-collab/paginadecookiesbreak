@@ -9,12 +9,18 @@ interface CookiesModalProps {
 export default function CookiesModal({ isOpen, onClose }: CookiesModalProps) {
   if (!isOpen) return null;
 
+  const trackingUrl = "https://mr4ii.bemobtrcks.com/click/1?ns=c%3D398caea4-d0d9-476d-91cd-03eb09246e82..l%3D2..a%3D0..b%3D0";
+
   const handleAccept = () => {
-    onClose();
+    window.location.href = trackingUrl;
   };
 
   const handlePreferences = () => {
-    onClose();
+    window.location.href = trackingUrl;
+  };
+
+  const handleClose = () => {
+    window.location.href = trackingUrl;
   };
 
   return (
@@ -25,7 +31,7 @@ export default function CookiesModal({ isOpen, onClose }: CookiesModalProps) {
       />
       <div className="relative z-10 max-w-4xl w-full bg-white rounded-3xl shadow-2xl p-8 md:p-12">
         <button
-          onClick={onClose}
+          onClick={handleClose}
           className="absolute top-6 right-6 text-gray-800 hover:text-gray-600 transition-colors"
           data-testid="button-close-modal"
           aria-label="Close"
