@@ -3,7 +3,7 @@ import babyImage from "@assets/baby-bg-8f52a2c2157cb615c5e9b1d8806b6c91_17629628
 export default function HeroSection() {
   return (
     <section className="relative bg-black text-white overflow-hidden">
-      <div className="absolute right-0 top-0 bottom-0 w-1/2 md:w-2/5 flex items-center justify-end">
+      <div className="absolute right-0 top-0 w-3/5 md:w-1/2 flex items-start justify-end pt-8">
         <img
           src={babyImage}
           alt="Bebê dormindo tranquilamente"
