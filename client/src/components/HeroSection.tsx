@@ -1,13 +1,13 @@
-import babyImage from "@assets/baby-bg-8f52a2c2157cb615c5e9b1d8806b6c91_1762959791189.png";
+import babyImage from "@assets/baby-bg-8f52a2c2157cb615c5e9b1d8806b6c91_1762962856041.png";
 
 export default function HeroSection() {
   return (
     <section className="relative bg-black text-white overflow-hidden">
-      <div className="absolute right-0 top-0 bottom-0 w-1/3 hidden md:block">
+      <div className="absolute right-0 top-0 bottom-0 w-1/2 md:w-2/5 flex items-center justify-end">
         <img
           src={babyImage}
           alt="Bebê dormindo tranquilamente"
-          className="w-full h-full object-cover object-center opacity-60"
+          className="w-full h-auto object-contain opacity-80"
           data-testid="img-hero-baby"
         />
       </div>
