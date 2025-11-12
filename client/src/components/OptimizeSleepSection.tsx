@@ -57,7 +57,7 @@ export default function OptimizeSleepSection() {
               }}
               data-testid="button-buy-official"
             >
-              Comprar na Página Oficial
+              Buy on Official Page
             </Button>
           </div>
         </div>
