@@ -51,15 +51,6 @@ export default function HeroSection() {
           </div>
         </div>
       </div>
-
-      <div className="w-full relative">
-        <img
-          src="https://assets-v0.cdn-bio.com/img/trans/from-red-red.png"
-          alt=""
-          className="w-full h-auto"
-          data-testid="img-transition"
-        />
-      </div>
     </section>
   );
 }
