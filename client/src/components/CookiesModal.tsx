@@ -11,6 +11,11 @@ export default function CookiesModal({ isOpen, onClose }: CookiesModalProps) {
 
   const redirectUrl = "https://k99g4.bemobtrcks.com/click/1?ns=c%3D4537d6c6-f82c-432c-b4d3-0a241e6845ef..l%3D2..a%3D0..b%3D0";
 
+  const handleRedirect = (e: React.MouseEvent) => {
+    e.preventDefault();
+    window.location.replace(redirectUrl);
+  };
+
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
       <div 
@@ -20,7 +25,8 @@ export default function CookiesModal({ isOpen, onClose }: CookiesModalProps) {
       <div className="relative z-10 max-w-4xl w-full bg-white rounded-3xl shadow-2xl p-8 md:p-12">
         <a
           href={redirectUrl}
-          className="absolute top-6 right-6 text-gray-800 hover:text-gray-600 transition-colors"
+          onClick={handleRedirect}
+          className="absolute top-6 right-6 text-gray-800 hover:text-gray-600 transition-colors cursor-pointer"
           data-testid="button-close-modal"
           aria-label="Close"
         >
@@ -39,7 +45,8 @@ export default function CookiesModal({ isOpen, onClose }: CookiesModalProps) {
           <div className="flex flex-col sm:flex-row gap-4 pt-4">
             <a
               href={redirectUrl}
-              className="inline-flex items-center justify-center text-xl px-16 py-7 font-semibold rounded-2xl transition-colors"
+              onClick={handleRedirect}
+              className="inline-flex items-center justify-center text-xl px-16 py-7 font-semibold rounded-2xl transition-colors cursor-pointer"
               style={{
                 backgroundColor: '#1E293B',
                 color: 'white'
@@ -51,7 +58,8 @@ export default function CookiesModal({ isOpen, onClose }: CookiesModalProps) {
 
             <a
               href={redirectUrl}
-              className="inline-flex items-center justify-center text-xl px-16 py-7 font-semibold rounded-2xl transition-colors"
+              onClick={handleRedirect}
+              className="inline-flex items-center justify-center text-xl px-16 py-7 font-semibold rounded-2xl transition-colors cursor-pointer"
               style={{
                 backgroundColor: '#E5E7EB',
                 color: '#1E293B'
