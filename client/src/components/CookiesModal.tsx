@@ -9,18 +9,16 @@ interface CookiesModalProps {
 export default function CookiesModal({ isOpen, onClose }: CookiesModalProps) {
   if (!isOpen) return null;
 
-  const trackingUrl = "https://mr4ii.bemobtrcks.com/click/1?ns=c%3Dda6c1ffe-83de-45be-b5d4-07c3fde6d3b7..l%3D2..a%3D0..b%3D0";
-
   const handleAccept = () => {
-    window.location.href = trackingUrl;
+    onClose();
   };
 
   const handlePreferences = () => {
-    window.location.href = trackingUrl;
+    onClose();
   };
 
   const handleClose = () => {
-    window.location.href = trackingUrl;
+    onClose();
   };
 
   return (
